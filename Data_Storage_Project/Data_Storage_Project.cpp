@@ -2,12 +2,18 @@
 #include <iostream>
 #include <vector>
 
-DataStorage::DataStorage(){
-	// 생성자 구현
+DataStorage::DataStorage(){}
+DataStorage::~DataStorage(){}
+unsigned char DataStorage::binaryToChar(const bool binaryArray[8]){
+	unsigned char result = 0;
+	for(int i = 0; i < 8; ++i){
+		if(binaryArray[i]){
+			result |= (1 << (7 - i));
+		}
+	}
+	return result;
 }
-DataStorage::~DataStorage(){
-	// 소멸자 구현
-}
+
 void DataStorage::addData(int data) {
 	std::cout << data;
 }

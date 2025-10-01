@@ -60,3 +60,4 @@ ipch/
 *.pyd
 __pycache__/
 /Data_Storage_Project/x64/Debug/vc143.idb
+/Data_Storage_Project/x64/Debug/Data_Storage_Project.log

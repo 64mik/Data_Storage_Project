@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\fileHandler">
+      <UniqueIdentifier>{234e4396-0d02-40da-a99e-28b900518c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\fileHandler">
+      <UniqueIdentifier>{e9dce1bf-4dcb-4c7f-9b13-5db343df2985}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_Storage_Project.cpp">
@@ -21,10 +27,22 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="fileRead.cpp">
+      <Filter>소스 파일\fileHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="fileWrite.cpp">
+      <Filter>소스 파일\fileHandler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_Storage_Project.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="fileRead.h">
+      <Filter>헤더 파일\fileHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="fileWrite.h">
+      <Filter>헤더 파일\fileHandler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

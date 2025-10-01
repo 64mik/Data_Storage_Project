@@ -124,10 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Data_Storage_Project.cpp" />
+    <ClCompile Include="fileRead.cpp" />
+    <ClCompile Include="fileWrite.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_Storage_Project.h" />
+    <ClInclude Include="fileRead.h" />
+    <ClInclude Include="fileWrite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
