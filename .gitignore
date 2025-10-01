@@ -59,3 +59,4 @@ ipch/
 *.pyo
 *.pyd
 __pycache__/
+/Data_Storage_Project/x64/Debug/vc143.idb
