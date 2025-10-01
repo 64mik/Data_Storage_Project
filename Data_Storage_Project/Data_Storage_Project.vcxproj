@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Documents\Git_local\cpp\public\virtual-text-folder\src\Data_Storage_Project.h" />
     <ClCompile Include="Data_Storage_Project.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
