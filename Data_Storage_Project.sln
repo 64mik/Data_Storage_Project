@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Data_Storage_Project", "Data_Storage_Project\Data_Storage_Project.vcxproj", "{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Debug|x64.ActiveCfg = Debug|x64
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Debug|x64.Build.0 = Debug|x64
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Debug|x86.ActiveCfg = Debug|Win32
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Debug|x86.Build.0 = Debug|Win32
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Release|x64.ActiveCfg = Release|x64
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Release|x64.Build.0 = Release|x64
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Release|x86.ActiveCfg = Release|Win32
+		{A88DF541-C585-489F-AA6C-F6BD5DD42BFE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58944835-E68E-4515-B690-3BE0D53BE275}
+	EndGlobalSection
+EndGlobal
