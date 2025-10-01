@@ -1,41 +1,61 @@
-# Prerequisites
-*.d
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-*.vs/
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# build result
+Debug/
+Release/
+x64/
+x86/
+[Oo]bj/
+[Bb]in/
 *.exe
-*.out
-*.app
+*.dll
+*.lib
+*.pdb
+*.idb
+*.ipch
+*.iobj
+*.log
+*.tlog
+*.lastbuildstate
+*.sdf
+*.cache
+*.db
+*.opendb
+*.VC.db
+*.VC.opendb
 
-# debug information files
-*.dwo
+# temp file
+*.tmp
+*.temp
+*.~*
+*.swp
+
+# other
+*.ncb
+*.aps
+*.plg
+*.vsscc
+*.vssscc
+*.vspscc
+*.vssscc
+*.scc
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+Makefile
+
+# etc IDE/tool
+ipch/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
