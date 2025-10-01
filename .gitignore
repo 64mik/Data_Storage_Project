@@ -45,7 +45,7 @@ x86/
 *.vspscc
 *.vssscc
 *.scc
-
+*.ldb
 # CMake
 CMakeFiles/
 CMakeCache.txt
