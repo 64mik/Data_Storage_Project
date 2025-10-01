@@ -21,8 +21,10 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Documents\Git_local\cpp\public\virtual-text-folder\src\Data_Storage_Project.h">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Data_Storage_Project.h">
       <Filter>헤더 파일</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>
