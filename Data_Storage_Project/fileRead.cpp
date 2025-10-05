@@ -1,4 +1,4 @@
-#include "fileRead.h"
+#include "FileRead.h"
 #include <iostream>
 #include <fstream>
 #include <string>

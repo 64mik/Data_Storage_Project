@@ -1,4 +1,4 @@
-#include "fileWrite.h"
+#include "FileWrite.h"
 #include <iostream>
 #include <fstream>
 #include <string>
