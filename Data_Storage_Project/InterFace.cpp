@@ -15,7 +15,7 @@ void InterFace::printColored(std::string text, char textColor, char bgColor) {
 	std::cout << text << std::endl;
 	SetConsoleTextAttribute(hConsole, (C_BLACK << 4) | C_LIGHTGRAY); // Reset to default
 }
-void InterFace::printFile() {
+void InterFace::printFile(std::string n) {
 	// Placeholder for file printing logic
 	std::cout << "Printing file content..." << std::endl;
 }
