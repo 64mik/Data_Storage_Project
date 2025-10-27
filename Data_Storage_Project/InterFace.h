@@ -7,13 +7,32 @@ class InterFace {
 		InterFace();
 		~InterFace();
 		//print
-		void print(std::string text);
-		void printColored(std::string text, char textColor, char bgColor = C_BLACK);
-		void printFile(std::string fileName);
-		void printFormatted();
+		static void gotoxy(int x, int y);
+		static void hideCursor(bool hide = true);
+		static void ClearConsole();
+		static int keyboardListener();
+		static int selectMenu(const std::vector<std::string>& v, int x=1, std::string space = "  ");
+		static void printVector(const std::vector<std::string>& v, size_t x = 1, std::string space = "  ", int select = -1);
+		static void print(std::string text);
+		static void printColored(std::string text, char textColor, char bgColor = C_BLACK);
+		static void printFile(std::string fileName);
+		static void printFormatted();
 		//set
 		void setTextColor();
 		void setFormat();
+		enum keyState
+		{
+			K_ESCAPE = 27,
+			K_SPACE = 32,
+			K_UP = 38,
+			K_DOWN = 40,
+			K_LEFT = 37,
+			K_RIGHT = 39,
+			K_ENTER = 13,
+			K_BACKSPACE = 8,
+			K_TAB = 9
+
+		};
 		enum Color
 		{
 			C_BLACK= 0,
