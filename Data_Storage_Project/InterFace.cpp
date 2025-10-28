@@ -67,33 +67,33 @@ int InterFace::keyboardListener() {
 		Sleep(100); // Reduce CPU usage
 	}
 }
-int InterFace::selectMenu(const std::vector<std::string>& v, int x, std::string space) {
+int InterFace::selectMenu(const std::vector<std::string>& v, int lineWidth, std::string space, int y) {
 	if (v.empty()) {
 		std::cerr << "Error: Menu options are empty." << std::endl;
 		return -1; // Indicate error
 	}
-	else if (x <= 0) {
-		std::cerr << "Error: x cannot be zero or negative." << std::endl;
+	else if (lineWidth <= 0) {
+		std::cerr << "Error: lineWidth cannot be zero or negative." << std::endl;
 		return -1; // Indicate error
 	}
 	int kb = 0;
 	size_t select = 0;
 	while (true) {
-		InterFace::gotoxy(0, 0);
-		std::cout << "\nSelect an option(" << select << ") \n"; 
-		printVector(v, x, space, select);
+		InterFace::gotoxy(0,y);
+		InterFace::printColored("Select an option("+ std::to_string(select) + ") \n", InterFace::C_BLACK, InterFace::C_YELLOW); 
+		printVector(v, lineWidth, space, select);
 		Sleep(80); // To prevent flickering
 		//입력
 		kb = InterFace::keyboardListener();
 		switch (kb) {
 		case InterFace::K_UP:
-			if (select >= x) {
-				select -= x;
+			if (select >= lineWidth) {
+				select -= lineWidth;
 			}
 			break;
 		case InterFace::K_DOWN:
-			if (select + x <= v.size()) {
-				select += x;
+			if (select + lineWidth <= v.size()) {
+				select += lineWidth;
 			}
 			break;
 		case InterFace::K_LEFT:
@@ -130,13 +130,13 @@ void InterFace::printColored(std::string text, char textColor, char bgColor) {
 	std::cout << text;
 	SetConsoleTextAttribute(hConsole, (C_BLACK << 4) | C_LIGHTGRAY); // Reset to default
 }
-void InterFace::printVector(const std::vector<std::string>& v, size_t x, std::string space, int select) {
+void InterFace::printVector(const std::vector<std::string>& v, size_t lineWidth, std::string space, int select) {
 	if (v.empty()) {
 		std::cerr << "Error: Menu options are empty." << std::endl;
 		return;
 	}
-	if (x <= 0) {
-		std::cerr << "Error: x cannot be zero or negative." << std::endl;
+	if (lineWidth <= 0) {
+		std::cerr << "Error: lineWidth cannot be zero or negative." << std::endl;
 		return;
 	}
 
@@ -144,20 +144,19 @@ void InterFace::printVector(const std::vector<std::string>& v, size_t x, std::st
 	for (const auto& line : v)
 		if (line.size() > longest) longest = line.size();
 
-	int width = (longest + space.size()) * x;
-	int height = v.size() / x + (v.size() % x == 0 ? 0 : 1);
+	int width = (longest + space.size()) * lineWidth;
+	int height = v.size() / lineWidth + (v.size() % lineWidth == 0 ? 0 : 1);
 
 	std::vector<std::vector<char>> screen(height, std::vector<char>(width, ' '));
 
 	for (int i = 0; i < height; ++i) {
 		int startX = 0;
-		for (int j = 0; j < (int)x; ++j) {
-			int idx = i * x + j;
+		for (int j = 0; j < (int)lineWidth; ++j) {
+			int idx = i * lineWidth + j;
 			if (idx >= (int)v.size()) break;
 
 			const std::string& line = v[idx];
-
-			// 한 글자씩 출력
+			
 			for (size_t z = 0; z < line.size(); ++z) {
 				char c = line[z];
 				if (idx == select) {
@@ -167,29 +166,9 @@ void InterFace::printVector(const std::vector<std::string>& v, size_t x, std::st
 					std::cout << c;
 				}
 			}
-			// line 끝난 뒤 space 출력
 			std::cout << space;
 			startX += line.size() + space.size();
 		}
 		std::cout << '\n';
 	}
 }
-void InterFace::printFile(std::string n) {
-	// Placeholder for file printing logic
-	std::cout << "Printing file content..." << std::endl;
-}
-void InterFace::printFormatted() {
-	// Placeholder for formatted printing logic
-	std::cout << "Printing formatted content..." << std::endl;
-}
-void InterFace::setTextColor() {
-	// Placeholder for setting text color logic
-	std::cout << "Setting text color..." << std::endl;
-}
-void InterFace::setFormat() {
-	// Placeholder for setting format logic
-	std::cout << "Setting format..." << std::endl;
-}
-// Note: Actual implementations for printFile, printFormatted, setTextColor, and setFormat would depend on specific requirements.
-// The above implementations are placeholders.
-	

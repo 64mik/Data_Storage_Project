@@ -11,15 +11,11 @@ class InterFace {
 		static void hideCursor(bool hide = true);
 		static void ClearConsole();
 		static int keyboardListener();
-		static int selectMenu(const std::vector<std::string>& v, int x=1, std::string space = "  ");
-		static void printVector(const std::vector<std::string>& v, size_t x = 1, std::string space = "  ", int select = -1);
+		static int selectMenu(const std::vector<std::string>& v, int lineWidth =1, std::string space = "  ", int y=0);
+		static void printVector(const std::vector<std::string>& v, size_t lineWidth = 1, std::string space = "  ", int select = -1);
 		static void print(std::string text);
 		static void printColored(std::string text, char textColor, char bgColor = C_BLACK);
-		static void printFile(std::string fileName);
-		static void printFormatted();
 		//set
-		void setTextColor();
-		void setFormat();
 		enum keyState
 		{
 			K_ESCAPE = 27,

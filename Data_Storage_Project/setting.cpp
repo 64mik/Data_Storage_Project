@@ -1,12 +1,26 @@
-#include "setting.h"
+#include "Setting.h"
 #include "Util.h"
 #include "FileHandler.h"
 #include <string>
 #include <map>
 #include <iostream>
 
+Setting::Setting() {
 
-void setting::integrityCheck(const std::map<std::string, std::string>& settingMap) {
+}
+Setting::~Setting() {
+
+}
+void Setting::makeSettingFile(const std::string& path){
+	if(Setting::currentSettingMap.empty()){
+		Setting::currentSettingMap = Setting::defaultSettingMap;
+		FileHandler::writeMapToFile(path, Setting::currentSettingMap);
+	}
+	else {
+		FileHandler::writeMapToFile(path, Setting::currentSettingMap);
+	}
+}
+void Setting::integrityCheck(const std::map<std::string, std::string>& settingMap) {
 	for(const auto& [key, value] : settingMap) {
 		if (settingMap.find(key) == settingMap.end()) {	// unknown key
 			std::cerr << "Warning: Unknown setting key found: " << key << std::endl;
