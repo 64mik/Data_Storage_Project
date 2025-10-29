@@ -1,11 +1,16 @@
 #include "DataStorage.h"
-#include "FileHandler.h"
-#include "InterFace.h"
-#include "Setting.h"
-#include "Util.h"
+#include "FileRead.h"
+#include "FileWrite.h"
 #include <iostream>
 
-int main()
-{
-    std::cout << "commit test again and again and again...??\n";
+int main(){
+	FileWrite fw;
+	FileRead fr;
+	DataStorage ds;
+	std::vector<std::string> v;
+	fw.makeFile("input.txt");
+	fr.readFile("input.txt", v);
+	fw.writeFile("output.txt", v);
+	ds.addData(42);
+	return 0;
 }

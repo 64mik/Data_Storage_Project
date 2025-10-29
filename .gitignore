@@ -39,3 +39,4 @@
 
 # debug information files
 *.dwo
+/Data_Storage_Project/Data_Storage_Project.vcxproj
