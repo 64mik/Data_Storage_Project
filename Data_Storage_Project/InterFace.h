@@ -1,14 +1,34 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
-
 #include <string>
 #include <vector>
-#include <array>
-
 class InterFace {
 	public:
 		InterFace();
-		~InterFace(); 
+		~InterFace();
+		//print
+		static void gotoxy(int x, int y);
+		static void hideCursor(bool hide = true);
+		static void ClearConsole();
+		static int keyboardListener();
+		static int selectMenu(const std::vector<std::string>& v, int lineWidth =1, std::string space = "  ", int y=0);
+		static void printVector(const std::vector<std::string>& v, size_t lineWidth = 1, std::string space = "  ", int select = -1);
+		static void print(std::string text);
+		static void printColored(std::string text, char textColor, char bgColor = C_BLACK);
+		//set
+		enum keyState
+		{
+			K_ESCAPE = 27,
+			K_SPACE = 32,
+			K_UP = 38,
+			K_DOWN = 40,
+			K_LEFT = 37,
+			K_RIGHT = 39,
+			K_ENTER = 13,
+			K_BACKSPACE = 8,
+			K_TAB = 9
+
+		};
 		enum Color
 		{
 			C_BLACK= 0,
@@ -28,39 +48,6 @@ class InterFace {
 			C_YELLOW = 14,
 			C_WHITE = 15
 		};
-		enum keyState
-		{
-			K_ESCAPE = 27,
-			K_SPACE = 32,
-			K_UP = 38,
-			K_DOWN = 40,
-			K_LEFT = 37,
-			K_RIGHT = 39,
-			K_ENTER = 13,
-			K_BACKSPACE = 8,
-			K_TAB = 9
-		};
-		struct ProgressBarOption
-		{
-			int totalUnit = 10;
-			char filledColor = C_GREEN;
-			char unfilledColor = C_DARKGRAY;
-			int x = 0;
-			int y = 0;
-			std::array<std::string, 5> ui = {"[", "=", ">", "-", "]"};
-		};
-
-		//print
-		static void printProgressBar(float percent, const std::string& text = "", const ProgressBarOption & op = ProgressBarOption{});
-		static void gotoxy(int x, int y);
-		static void hideCursor(bool hide = true);
-		static void ClearConsole();
-		static int keyboardListener();
-		static int selectMenu(const std::vector<std::string>& v, int lineWidth =1, std::string space = "  ", int y=0);
-		static void printVector(const std::vector<std::string>& v, size_t lineWidth = 1, std::string space = "  ", int select = -1);
-		static void print(std::string text);
-		static void printColored(std::string text, char textColor, char bgColor = C_BLACK);
-		//set
 	private:
 		char textColor;
 		char bgColor;

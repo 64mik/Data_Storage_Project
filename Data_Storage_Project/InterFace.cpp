@@ -1,31 +1,11 @@
 #include "InterFace.h"
-#include "Util.h"
 #include <iostream>
 #include <windows.h>
 #include <vector>
 #include <string>
 
-
 InterFace::InterFace() : textColor(C_LIGHTGRAY), bgColor(C_BLACK), format(0) {}
 InterFace::~InterFace() {}
-void InterFace::printProgressBar(float percent,const std::string& text, const ProgressBarOption& op) {
-	std::string filledStr = "";
-	std::string unfilledStr = "";
-	percent = Util::clamp(percent, 0.0f, 100.0f);
-	int unit = percent / (100/(float)op.totalUnit);
-	for(int i =0; i<unit; i++)
-		filledStr += op.ui[1];
-	filledStr += op.ui[1];
-	for (int i = 0; i < op.totalUnit - unit; i++)
-		unfilledStr += op.ui[3];
-	InterFace::gotoxy(op.x, op.y);
-	std::cout << op.ui[0];
-	InterFace::printColored(filledStr, op.filledColor);
-	InterFace::printColored(unfilledStr, op.unfilledColor);
-	std::cout << op.ui[4];
-	InterFace::gotoxy(op.x, op.y+1);
-	std::cout << text << (int)percent << "\%";
-}
 void InterFace::gotoxy(int x, int y) {
 	COORD pos = { (SHORT)x, (SHORT)y };
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
