@@ -125,6 +125,19 @@
   <ItemGroup>
     <ClCompile Include="Data_Storage_Project.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PathManager.cpp" />
+    <ClCompile Include="PathManager.h" />
+    <ClCompile Include="setting.cpp" />
+    <ClCompile Include="UserData.cpp" />
+    <ClCompile Include="Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStroage.h" />
+    <ClInclude Include="FileHandler.h" />
+    <ClInclude Include="InterFace.h" />
+    <ClInclude Include="setting.h" />
+    <ClInclude Include="UserData.h" />
+    <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
