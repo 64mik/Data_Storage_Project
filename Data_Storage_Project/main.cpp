@@ -4,6 +4,6 @@
 
 int main(){
 	PathManager pm(".datastorage");
-	DataStorage ds(pm.getRootPath(), "diary");	//루트에 ds 객체 하나 생성
+	DataStorage ds(pm.getRootPath(), "www");	//루트에 ds 객체 하나 생성
 	return 0;
 }

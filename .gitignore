@@ -45,3 +45,12 @@
 *.json
 *.ifc
 *.command
+/Data_Storage_Project/x64/Debug/vc143.idb
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/link.command.1.tlog
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/link.read.1.tlog
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/link.write.1.tlog
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/link.secondary.1.tlog
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/Data_Storage_Project.lastbuildstate
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/CL.command.1.tlog
+/Data_Storage_Project/x64/Debug/Data_Storage_Project.exe.recipe
+/Data_Storage_Project/x64/Debug/Data_Sto.a88df541.tlog/Cl.items.tlog

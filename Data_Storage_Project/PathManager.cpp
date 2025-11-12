@@ -1,7 +1,7 @@
 #include "PathManager.h"
 #include "FileHandler.h"
-#include <iostream>
 #include <filesystem>
+#include <iostream>
 #include <windows.h>
 #include <shlobj.h>
 
@@ -12,6 +12,7 @@ PathManager::PathManager(std::string rootFolderName) {
 	}
 }
 PathManager::~PathManager(){}
+
 std::filesystem::path PathManager::getRootPath() {
 	return rootPath;
 }
