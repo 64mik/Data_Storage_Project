@@ -3,13 +3,41 @@
 #include <string>
 #include <vector>
 #include <map>
-class Setting {
+#include <filesystem>
+#include <shlobj.h>
+#include <KnownFolders.h>
+class System {
 	public:
-		Setting();
-		~Setting();
+		enum PathType {
+			USERPROFILE,
+			DOCUMENTS,
+			DESKTOP,
+			DOWNLOADS,
+			ROOT,
+			CURRENT,
+			SETTINGS
+		};
+		System();
+		~System();
 		static void makeSettingFile(const std::string& path);
 		static void integrityCheck(const std::map<std::string, std::string>& settingMap);
 		inline static std::map<std::string, std::string> currentSettingMap;
+		void setRootPath(int parentFolder, std::string folderName);
+		std::filesystem::path getPath(int pathType);
+		const KNOWNFOLDERID& ToFolderID(PathType type) {
+			switch (type) {
+			case PathType::USERPROFILE:
+				return FOLDERID_Profile;
+			case PathType::DOCUMENTS:
+				return FOLDERID_Documents;
+			case PathType::DESKTOP:
+				return FOLDERID_Desktop;
+			case PathType::DOWNLOADS:
+				return FOLDERID_Downloads;
+			default:
+				return FOLDERID_Profile;
+			}
+		}
 	private:
 		inline static std::map<std::string, std::string> defaultSettingMap = {
 			{"version", "1.0.0"},
@@ -29,6 +57,7 @@ class Setting {
 			{"default_color","BRIGHT_GRAY" },
 			{"highlight_color","BRIGHT_YELLOW" },
 		};
-		//세팅 항목 수정하는 함수 만들기(INT만 받거나 T/F, 색상 등)
+		std::filesystem::path rootPath;
+		std::string currentPath;
 };
 #endif // !SETTING_H

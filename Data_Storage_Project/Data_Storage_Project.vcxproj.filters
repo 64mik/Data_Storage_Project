@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일\tool">
+      <UniqueIdentifier>{1aef21e7-55de-4cdf-84ab-d7991535f3fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Data_Storage_Project.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -27,7 +27,7 @@
     <ClCompile Include="InterFace.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="setting.cpp">
+    <ClCompile Include="System.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="UserData.cpp">
@@ -36,31 +36,28 @@
     <ClCompile Include="Util.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="PathManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="PathManager.cpp">
+    <ClCompile Include="DataStorage.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FileHandler.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="InterFace.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="setting.h">
+    <ClInclude Include="System.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="UserData.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="DataStroage.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>헤더 파일\tool</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHandler.h">
+      <Filter>헤더 파일\tool</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -129,9 +129,7 @@
     <ClCompile Include="FileHandler.cpp" />
     <ClCompile Include="InterFace.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PathManager.cpp" />
-    <ClCompile Include="PathManager.h" />
-    <ClCompile Include="setting.cpp" />
+    <ClCompile Include="System.cpp" />
     <ClCompile Include="UserData.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
@@ -139,7 +137,7 @@
     <ClInclude Include="DataStroage.h" />
     <ClInclude Include="FileHandler.h" />
     <ClInclude Include="InterFace.h" />
-    <ClInclude Include="setting.h" />
+    <ClInclude Include="System.h" />
     <ClInclude Include="UserData.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>

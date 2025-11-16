@@ -1,5 +1,4 @@
 ﻿#include "DataStroage.h"
-#include "setting.h"
 #include "FileHandler.h"
 #include <iostream>
 #include <filesystem>
@@ -11,19 +10,20 @@ DataStorage::DataStorage(std::filesystem::path root, std::string storageName) {
 	subFolder = {
 		"inFiles\\", "outFiles\\", "data\\"
 	};
-	rootPath = root / "Data Storages" / dsName;
-	FileHandler::makeSubFolders(root.string(), {"Data Storages", "Settings", ("Data Storages\\" + dsName)});
+	rootPath = root / dsName;
+	FileHandler::makeSubFolders(root.string(), { "Settings", dsName });
 	FileHandler::makeSubFolders(rootPath.string(), subFolder);
 	//Setting::makeSettingFile(rp);
-	std::string fileName[4]= { " tags.txt"," offset.txt"," setting.txt"," umm.ds" };
+	std::string fileName[4]= { "tags.txt","offset.txt","setting.txt" };
 	currentPath = rootPath / subFolder[0];
-	for (auto f : fileName) {
-		FileHandler::makeFile(currentPath.string()+ dsName + f);
+	for (std::string f : fileName) {
+		FileHandler::makeFile(currentPath.string() + dsName + '_' + f);
 	}
 }
 DataStorage::~DataStorage(){}
-void DataStorage::deleteDataStorage(const std::string& name) {
-	FileHandler::deleteFolder(rootPath.string());
+/////////////
+void DataStorage::deleteDataStorage(const std::string& path) {
+	FileHandler::deleteFolder(path);
 }
 void DataStorage::makeTag() {}
 void DataStorage::deleteTag() {}
